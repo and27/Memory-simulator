@@ -1,8 +1,0 @@
-512
-32
-8
-4
-data1_p1.txt
-data1_p2.txt
-data1_p3.txt
-data1_p4.txt
