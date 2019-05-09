@@ -1,4 +1,6 @@
 import sys
+from time import time
+
 
 #Clases para definir cada Instrucción
 class Instruction:
@@ -267,6 +269,7 @@ def main(arguments):
     	print ("\n Error, asegurece de que la estructura del comando es correcta: ")
     	print ("python <nombre_programa> <nombre_archivo> <version> <print> \n")
     else:
+        start_time = time()
         InsList = leer(arguments[1])
         if arguments[2] == '1':
             pageFault, contWrites, _ =  version_1(InsList,create_list(),int(arguments[3]))
@@ -281,5 +284,13 @@ def main(arguments):
 
         else:
             print("Error al ingresar la version")
+
+        elapsed_time = time() - start_time
+        print("Elapsed time: %.10f seconds." % elapsed_time)
+
+	
+
 arguments = sys.argv
 main(arguments)
+
+
